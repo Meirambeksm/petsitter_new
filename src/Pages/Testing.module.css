@@ -1,0 +1,210 @@
+.test {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.test__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 27rem;
+  margin-top: 10rem;
+}
+
+.questionNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+  width: 90rem;
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 5rem;
+}
+.option {
+  display: none;
+}
+
+.option:checked + .label::before {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #320064;
+}
+
+.label {
+  position: relative;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  border-radius: 0.3rem;
+  padding: 0.6rem 3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label:before {
+  content: "";
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0.3rem solid #7e5e9e;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.completion {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.completion__text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 90rem;
+  margin-bottom: 10rem;
+}
+
+.completion__btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  border-radius: 4rem;
+  padding: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: #320064;
+  font-size: 3rem;
+  transition: all 0.5s ease;
+}
+
+.completion__btn__text {
+  font-weight: bold;
+  animation-name: rotateWord;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.completion__btn:hover {
+  transform: scale(1.1);
+  border: solid #320064 1px;
+  background-color: #bfa8d7;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.completion__btn__img {
+  animation-name: rotateArrow;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.completion__btn__text__add {
+  animation-name: moveWord;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.multimedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  margin: 10px auto;
+}
+
+.multimedia > video {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotateArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveWord {
+  0% {
+    transform: skewX(0);
+  }
+  25% {
+    transform: skewX(5deg);
+  }
+
+  50% {
+    transform: skew(0);
+  }
+
+  75% {
+    transform: skewX(-5deg);
+  }
+
+  100% {
+    transform: skewX(0);
+  }
+}
+
+@keyframes rotateWord {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.skipBtn {
+  padding: 1rem;
+  border: solid #320064 1px;
+  border-radius: 2rem;
+  color: #320064;
+  font-weight: bold;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.skipBtn:hover {
+  color: #fff;
+  border: none;
+  background-color: #320064;
+}
