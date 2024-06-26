@@ -36,7 +36,7 @@ export default function Testing({ userid }) {
       psyresult: result,
     };
     usePost(
-      "http://localhost:8000/api/send_psycho_answers/",
+      "http://localhost:8080/api/send_psycho_answers/",
       testResult,
       console.log
     );
