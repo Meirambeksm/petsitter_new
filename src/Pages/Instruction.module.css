@@ -1,0 +1,269 @@
+.instruction {
+  color: #333;
+}
+
+.topic {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topic__head {
+  display: flex;
+  gap: 1rem;
+  padding-left: 11rem;
+  align-items: center;
+  width: 140rem;
+  height: 8rem;
+  background-color: #bfa8d7;
+  opacity: 0.4;
+  border-top-left-radius: 5.4rem;
+  border-top-right-radius: 5.4rem;
+  color: #320064;
+  font-size: 2rem;
+}
+
+.topic__name {
+  font-weight: bold;
+}
+
+.topic__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0ecf4;
+  width: 140rem;
+  height: 65rem;
+  border-bottom-left-radius: 5.4rem;
+  border-bottom-right-radius: 5.4rem;
+  padding-left: 11rem;
+  padding-right: 5rem;
+}
+
+.topic__body__icon {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.paw {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+}
+
+.paw > img {
+  width: 6.3rem;
+}
+
+.paw__text {
+  display: flex;
+  flex-direction: column;
+  color: #320064;
+  font-size: 1.8rem;
+}
+
+.paw__heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.star {
+  width: 2.6rem;
+}
+
+.arrow {
+  width: 1.9rem;
+}
+
+.dots {
+  height: 2.5rem;
+}
+
+.topic__body__letter {
+  font-size: 2.3rem;
+  font-weight: medium;
+  color: #320064;
+  text-align: center;
+  width: 100rem;
+  line-height: 3rem;
+  margin-bottom: 5rem;
+}
+
+.topic__body__letter > span {
+  font-weight: bold;
+}
+
+.topic__body__letter__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60%;
+}
+
+.topic__body__letter__wrapper button {
+  margin-top: 50px;
+}
+
+.instruction__btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: none;
+  border-radius: 4rem;
+  padding: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: #320064;
+  font-size: 2rem;
+  transition: all 0.5s ease;
+}
+
+.instruction__btn:hover {
+  transform: scale(1.1);
+  border: solid #320064 1px;
+  background-color: #bfa8d7;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.instruction__arrow {
+  animation-name: moveInstructionArrow;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveInstructionArrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.completion__btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  border-radius: 4rem;
+  padding: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: #320064;
+  font-size: 3rem;
+  transition: all 0.5s ease;
+}
+
+.completion__btn__text {
+  font-weight: bold;
+  animation-name: rotateWord;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.completion__btn:hover {
+  transform: scale(1.1);
+  border: solid #320064 1px;
+  background-color: #bfa8d7;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.completion__btn__img {
+  animation-name: rotateArrow;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.completion__btn__text__add {
+  animation-name: moveWord;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.multimedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.multimedia > video {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotateArrow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveWord {
+  0% {
+    transform: skewX(0);
+  }
+  25% {
+    transform: skewX(5deg);
+  }
+
+  50% {
+    transform: skew(0);
+  }
+
+  75% {
+    transform: skewX(-5deg);
+  }
+
+  100% {
+    transform: skewX(0);
+  }
+}
+
+@keyframes rotateWord {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

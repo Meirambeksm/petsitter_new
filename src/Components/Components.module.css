@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4rem 27rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav li {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav li:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.logo {
+  height: 38px;
+  width: 222px;
+}
+
+.timer {
+  font-size: 2.5rem;
+  font-weight: bold;
+  opacity: 0.5;
+  margin-bottom: 6.5rem;
+}
+
+.last_seconds {
+  font-size: 2.5rem;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 6.5rem;
+}
