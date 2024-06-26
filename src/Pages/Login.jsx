@@ -17,7 +17,7 @@ export default function Login({ setUserid }) {
   const [letter, setLetter] = useState(false);
   const emailExists = details.some((detail) => detail.email === email);
 
-  useRequest("http://localhost:8000/api/users/", setDetails);
+  useRequest("http://localhost:8080/api/users/", setDetails);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function Login({ setUserid }) {
       profession: pet,
       currentgamequestionid: 0,
     };
-    usePost("http://localhost:8000/api/add_user", personalData, setUserid);
+    usePost("http://localhost:8080/api/add_user", personalData, setUserid);
     setEmail("");
     setFirstName("");
     setSecondName("");
